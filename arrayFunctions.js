@@ -106,7 +106,9 @@ secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]);
  * - Use string method .slice()
  */
 function youGottaCalmDown(shout) {
-  console.log(shout.slice(0, 3));
-  // Your code here
+  const place = shout.indexOf("!");
+  const text = shout.slice(0, place);
+
+  console.log(text, "!");
 }
-youGottaCalmDown("HI!!!!!!!!!!!!");
+youGottaCalmDown("Taylor Schwifting!!!!!!!!!!!");
