@@ -77,11 +77,21 @@ eliminateTeam(["Brazil", "Germany", "Italy"]);
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]) -> ["banana", "kiwi"]
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]) -> []
  */
-function secondHalfOfArrayIfItIsEven(fruits) {
-  // Your code here
-}
 
+function secondHalfOfArrayIfItIsEven(fruits) {
+  const l = fruits.length;
+  if (l % 2 == 0) {
+    const lastTwo = [fruits[2], fruits[3]];
+    console.log(lastTwo);
+  } else if (l % 2 == 1) {
+    const lastTwo = [];
+    console.log(lastTwo);
+  }
+}
+secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]);
+//secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"])
 /**
+ 
  * youGottaCalmDown(shout):
  * - receives a string `shout`
  * - returns the string `shout` with at most one exclamation mark (!) at the end.
@@ -96,5 +106,7 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  * - Use string method .slice()
  */
 function youGottaCalmDown(shout) {
+  console.log(shout.slice(0, 3));
   // Your code here
 }
+youGottaCalmDown("HI!!!!!!!!!!!!");
