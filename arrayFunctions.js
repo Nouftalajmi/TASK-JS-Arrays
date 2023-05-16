@@ -13,12 +13,12 @@ function isArrayLengthOdd(numbers) {
   const l = numbers.length;
 
   if (l % 2 == 1) {
-    console.log(true);
+    return true;
   } else {
-    console.log(false);
+    return false;
   }
 }
-isArrayLengthOdd([1, 2, 3]);
+console.log(isArrayLengthOdd([1, 2, 3]));
 
 /**
  * isArrayLengthEven(numbers):
@@ -33,12 +33,12 @@ isArrayLengthOdd([1, 2, 3]);
 function isArrayLengthEven(numbers) {
   const l = numbers.length;
   if (l % 2 == 0) {
-    console.log(True);
+    return true;
   } else {
-    console.log(false);
+    return false;
   }
 }
-isArrayLengthEven([1, 2, 3]);
+console.log(isArrayLengthEven([1, 2, 3]));
 
 /**
  * addLailaToArray(instructors):
@@ -51,9 +51,9 @@ isArrayLengthEven([1, 2, 3]);
 
 function addLailaToArray(instructors) {
   instructors.push("laila");
-  console.log(instructors);
+  return instructors;
 }
-addLailaToArray(["Mshary", "Hasan"]);
+console.log(addLailaToArray(["Mshary", "Hasan"]));
 /**
  * eliminateTeam(teams):
  * - receives array `teams`
@@ -64,9 +64,9 @@ addLailaToArray(["Mshary", "Hasan"]);
  */
 function eliminateTeam(teams) {
   teams.pop("Italy");
-  console.log(teams);
+  return teams;
 }
-eliminateTeam(["Brazil", "Germany", "Italy"]);
+console.log(eliminateTeam(["Brazil", "Germany", "Italy"]));
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
  * - receives array `fruits`
@@ -82,14 +82,22 @@ function secondHalfOfArrayIfItIsEven(fruits) {
   const l = fruits.length;
   if (l % 2 == 0) {
     const lastTwo = [fruits[2], fruits[3]];
-    console.log(lastTwo);
+    return lastTwo;
   } else if (l % 2 == 1) {
     const lastTwo = [];
-    console.log(lastTwo);
+    return lastTwo;
   }
 }
-secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]);
-//secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"])
+console.log(secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]));
+// console.log(
+//   secondHalfOfArrayIfItIsEven([
+//     "apple",
+//     "orange",
+//     "banana",
+//     "kiwi",
+//     "blueberry",
+//   ])
+// );
 /**
  
  * youGottaCalmDown(shout):
@@ -109,6 +117,6 @@ function youGottaCalmDown(shout) {
   const place = shout.indexOf("!");
   const text = shout.slice(0, place);
 
-  console.log(text, "!");
+  return console.log(text, "!");
 }
 youGottaCalmDown("Taylor Schwifting!!!!!!!!!!!");
